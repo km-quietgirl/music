@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width"/>
+		<!-- Add to homescreen for Safari on Ios -->
+		  <meta name="apple-mobile-web-app-capable" content="yes">
+		  <meta name="apple-mobile-web-app-status-bar-style" content="red">
+		  <meta name="apple-mobile-web-app-title" content="音乐">
+		  <link rel="apple-touch-icon" href="logo.png">
+		
+		 <!-- Add to homescreen for Chrome on Android -->
+		  <meta name="mobile-web-app-capable" content="yes">
+		  <meta name="application-name" content="music">
+		  <meta name="theme-color" content="red">
+		  <link rel="icon" sizes="192x192" href="logo.png">
+		<title>音乐播放器</title>
+	</head>
+	<link rel="stylesheet" href="css/main.css" />
+	<script src="js/jquery.js"></script>
+	<script src="js/main.js"></script>
+	<body>
+		<div class="sp">
+			<img src="imgs/sp.png"/ class="spimg">
+		</div>
+		<div id="bg_img"></div>
+		<div id="bg_play"></div>
+		<div id="container">
+			<audio src="plays/Lady Gaga - Angel Down - Work 版.mp3"></audio>
+			<div class="back">
+				<span class="tex1">&#xe604;</span>
+			</div>
+			<div class="name_list">
+				<div class="gename">Angel Down-Work Tape</div>
+				<div class="name">Lady Gaga</div>
+			</div>
+			<div class="min">
+				<img src="./imgs/a1.jpg"/ class="tu">
+			</div>
+			<div class="progress">
+				<div class="progressed"></div>
+				<div class="cirle"></div>
+			</div>
+			<div class="current">0:00</div>
+			<div class="duration">3:40</div>
+			<div class="botk">
+				<div class="prev">&#xe601;</div>
+				<div class="next">&#xe603;</div>
+				<div class="play">&#xe641;</div>
+				<div class="list">&#xe60b;</div>
+				<!--<div class="pause">&#xe61f;</div>-->
+			</div>
+		</div>
+		<!--<div class="display">
+			<div class="header">	
+				<div class="left">播放队列</div>
+				<div class="right">
+					<span class="icon add">&#xe64c;</span>
+					<span class="icon delete">清空队列</span>
+				</div>
+			</div>
+			<ul class="gd">
+					
+		    </ul>
+		</div>-->
+		<!--<div class="song-list">
+		  <div data-v='{"gename":"不分手的恋爱","name":"许嵩","src":"不分手的恋爱.mp3","duration":"4:30"}' class="song"></div>
+		  <div data-v='{"gename":"全世界宣布爱你","name":"陈奕迅","src":"全世界宣布爱你.mp3","duration":"4:30"}' class="song"></div>
+	    </div>-->
+		
+	</body>
+</html>
