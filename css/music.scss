@@ -1,0 +1,423 @@
+$width:320px 360px 375px 412px 414px 750px;
+html{
+    font-size: 100px;
+}
+$color:#D40203;
+body{
+    font-size: 16px;
+    background:white;
+    background:url(../images/bg1.jpg);
+    background-size: 100%;
+}
+*{
+    padding: 0;
+    margin:0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family:"微软雅黑","宋体",sans-serif;
+    letter-spacing: 1px;
+}
+
+$shiji-width:750px;
+@each $i in $width{
+    @media screen and (min-width: #{$i}){
+        html{
+            font-size:100px * $i / $shiji-width;
+            
+        }
+    }
+}
+.icon{
+    font-family:"iconfont";
+}
+@mixin center{
+    position: relative;
+    top: 0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+}
+@mixin top-bottom{
+    position: absolute;
+    top: 0;
+    bottom:0;
+    margin:auto;
+}
+@mixin font($height,$size){
+    text-align: center;
+    line-height: $height;
+    font-size: $size;
+}
+
+/*head*/
+#main{
+    width:100%;
+    height: auto;
+    
+}
+ .header{
+    width: 100%;
+    height: 1rem; 
+    padding:0.2rem 0.3rem;
+    position: relative;
+    color:white;
+    line-height: 0.6rem;
+    font-size: 18px;
+    background:$color;
+    .return{
+       width:0.6rem;
+       height:0.6rem;
+       background: url(../images/jtz.png)0px 6px;
+       background-repeat: no-repeat;
+       background-size: 60%;
+         @include top-bottom;
+        left:0.3rem;
+    }
+    .dian{
+        width:0.6rem;
+        height:0.6rem;
+        background: url(../images/dian.png)0px 0.2rem;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        float: right;
+       
+    }
+    #head{
+        display: block;
+        width:4rem;
+        height:0.6rem;
+        @include center;
+        li{
+            width:100%;
+            height:0.6rem;
+            @include font(0.6rem,20px)
+        }
+  
+    }
+    
+}
+#author{
+    width:100%;
+    height:1rem;
+    @include font(1rem,16px);
+    color:#eee;
+}
+.xiezhen{
+    width:100%;
+    height:1rem;
+    @include font(0.6rem,14px);
+    padding:0.2rem 0;
+   
+    a{
+        display: inline-block;
+        width:auto;
+        height:0.6rem;
+        border:1px solid white;
+        border-radius: 10%;
+        padding:0 0.2rem;
+        color:white;
+        margin-right:0.1rem;
+        text-decoration: none;
+    }
+}
+/*写真音效*/
+
+/*歌词*/
+
+#geci{
+    width:100%;
+    height:6rem;
+    padding:0rem 1.4rem;
+    margin-top:0.5rem;
+    overflow: hidden;
+    position: relative;
+    ul.geci{
+         width:100%;
+         height:auto;
+         position: absolute;
+         left:0;
+         right:0;
+         top:3rem;
+         margin:auto;
+         li{
+            width:100%;
+            height:auto;
+            line-height:0.6rem;
+            text-align: center;
+            color:#eee;
+            font-size: 14px;
+            
+        }
+    }
+    
+}
+/*歌词*/
+
+
+/*foot*/
+.foot_1{
+    width:100%;
+    height:1rem;
+    position: fixed;
+    bottom:0;
+    left:0;
+    padding:0.2rem 0.3rem;
+    background:#2f2f2f;
+    opacity: 0.5;      
+}
+.foot{
+    width:100%;
+    position: fixed;
+    bottom:0;
+    left:0;
+    .foot_4{
+        width:100%;
+        height:0.8rem;
+        padding:0.2rem 0.3rem; 
+        text-align: center; 
+        color:white;
+
+        div{
+            float: left;
+        }
+        #current-time{
+            width:20%;
+        }
+        #progress{
+           width:60%;
+           height:2px;
+           background:white;
+           margin-top:0.2rem;
+           position: relative;
+            #progress_1{
+               height:2px;
+               background:$color;
+               position: absolute;
+               left:0;
+               top:0;
+            }
+            #p-i{
+                width:0.3rem;
+                height:0.3rem;
+                border-radius: 50%;
+                background:$color;
+                position: absolute;
+                left:-0.15rem;
+                top:-0.15rem;
+            }
+        }
+        #duration{
+            width:20%;
+        }
+    }
+    .foot_3{
+        width:100%;
+        height:1.8rem;
+        padding:0.2rem 1rem; 
+        text-align: center;
+        position: relative;
+        div{
+            width:33.333%;
+            height:1.4rem;
+            float:left;
+        } 
+        .pre{
+            background:url(../images/shang.png);
+            background-repeat: no-repeat;
+            background-position: right; 
+            background-size:60%;
+        }
+        #play{
+            background:url(../images/bofang.png);
+            background-repeat: no-repeat;
+            background-position: center; 
+            background-size:80%;
+        }
+        .next{
+            background:url(../images/xia.png);
+            background-repeat: no-repeat;
+            background-position: left; 
+            background-size:60%;
+        }
+       
+    }
+    
+    .foot_2{
+        width:100%;
+        height:1rem;
+        padding:0.2rem 0.3rem;
+         div{
+            width:25%;
+            height:0.6rem;
+            float:left;
+        }
+        div:nth-of-type(1){
+            background:url(../images/sc.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        div:nth-of-type(2){
+            background:url(../images/shunxu.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 40%;
+        }
+        div:nth-of-type(3){
+            background:url(../images/xiazai.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 40%;
+        }
+        div:nth-of-type(4){
+            background:url(../images/list.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 41%;
+        }
+    }
+   
+    
+}
+/*foot*/
+
+/*音量*/
+.yinliang{
+    width:100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background:#2f2f2f;
+   opacity: 0.8;
+    padding:0.6rem 0.4rem;
+    .yl_1{
+        width:100%;
+        height:0.6rem;
+        
+        #mote{
+            width:20%;
+            height:100%;
+            background:url(../images/yinliang1.png);
+            background-repeat: no-repeat;
+            background-position: center; 
+            background-size:60%;
+            float: left;
+        }   
+        #volume {
+            width:80%;
+            height:2px;
+            background:white;
+            margin-top:0.3rem;
+            position: relative;
+            float: left;
+            #volume_1{
+               height:2px;
+               background:$color;
+               position: absolute;
+               left:0;
+               top:0;
+            }
+            #v-i{
+                width:0.3rem;
+                height:0.3rem;
+                border-radius: 50%;
+                background:white;
+                position: absolute;
+                right:-0.15rem;
+                top:-0.15rem;
+            }
+        }
+    }
+    .yl_2{
+         width:100%;
+        height:0.6rem;
+        text-align: center;
+        line-height: 0.6rem;
+        color:white;
+        margin-top:0.4rem;
+        font-size: 18px;
+    }
+    
+}
+/*音量*/
+
+/*列表*/
+.liebiao{
+    width:100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background:#2f2f2f;
+    opacity: 0.9;
+    padding:0.6rem 0.3rem;
+   
+    #list{
+        width:100%;
+        li{
+            width:100%;
+            height:1rem;
+            line-height: 1rem;
+            color:#eee;
+            letter-spacing:3px;
+            font-weight: none;
+            font-size: 14px;
+            border-bottom: 1px solid #666;
+            span{
+                margin-right:2px;
+            }
+            .name{
+                color:white;
+                font-size: 18px;
+            }
+            .delete{
+                   float: right;
+            }
+            
+        }
+        li.active{
+               color:$color;
+               .name{
+                    color:$color;
+                    font-size: 18px;
+                }
+                .author{
+                    color:$color;
+                    font-size: 14px;
+                }
+                
+            }
+       
+    }
+    .qx_1{
+         width:100%;
+        height:0.6rem;
+        text-align: center;
+        line-height: 0.6rem;
+        color:white;
+        margin-top:0.4rem;
+        font-size: 18px;
+    }
+}
+/*列表*/
+.shan1{
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    width:100%;
+    height:auto;
+    img{
+        width:100%;
+        height:auto;
+    }
+}
+@keyframes move{
+    0%{
+        left:0;
+    }
+   100%{
+       left:-100%;
+   }
+}
+.move{
+   animation:move 1s linear 0s 1 forwards ;
+}
